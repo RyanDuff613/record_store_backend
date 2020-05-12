@@ -1,8 +1,12 @@
 class Album
-  attr_reader :name
+  @@albums = {}
 
-  def ==(other_album)
-    self.name.eq?(other_album.name)
+  def initialize(name)
+    @name = name
   end
 
+  def self.all
+    @@albums.values()
+  end
+  
 end
