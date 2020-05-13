@@ -14,6 +14,8 @@ describe '#Album' do
       album2 = Album.new("blue", nil)
       album2.save()
       expect(Album.find(album.id)).to(eq(album))
+    end
+  end
 
   describe('.all') do
     it ("returns an empty array when no albums have been saved") do
@@ -68,8 +70,5 @@ describe '#Album' do
       album.delete()
       expect(Album.all).to(eq([album2]))
     end
-
-
-
-
+  end
 end
