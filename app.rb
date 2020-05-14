@@ -57,8 +57,8 @@ get('/albums/:id/songs/:song_id') do
 end
 
 post('/albums/:id/songs') do
-  @album = Album.find(params[:song_name], @album.id, nil)
-  song = Song.new(params[song_name], @album.id. nil)
+  @album = Album.find(params[:id].to_i())
+  song = Song.new(params[:song_name], @album.id, nil)
   song.save()
   erb(:album)
 end
